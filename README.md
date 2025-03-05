@@ -1,2 +1,1 @@
-# faq
- FAQ on organic semiconductors
+See https://cmsos.github.io/lgf/index.html
