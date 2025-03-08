@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>What density functional to use</title>
+</head>
+<body>
+<h1>What density functional to use</h1>
+
+<p><mark>[AZ.08.03.2025]</mark><br>
+For conjugated molecules, the most commonly used density functionals are <a href="https://server.ccl.net//chemistry/resources/messages/2002/05/22.008-dir/">B3LYP</a>, <a href="https://doi.org/10.1016/j.cplett.2004.06.011">CAM-B3LYP</a>, and <a href="https://doi.org/10.1039/b810189b">ωB97X</a>. Importantly, such parameters as BLA, conjugated dihedrals, bandgap, IE/EA, couplings [<a href="https://doi.org/10.1021/jz3021292">Sutton13</a>] depends monotonically on the fraction of HF-exchange, so that typically B3LYP/ωB97X gives lower/upper estimates of these parameters, whereas CAM-B3LYP is the most accurate (polyacetylene, <a href="https://doi.org/10.1021/acs.jpclett.9b01200">stilbene</a>, <a href="https://doi.org/10.1016/j.chemphys.2016.09.009">distyrylbenzene derivatives</a>, <a href="https://doi.org/10.1021/acs.jpcc.7b11271">P3HT</a>). For intra- and intermolecular noncovalent interactions, <a href="https://doi.org/10.1002/jcc.21759">D3</a> dispersion corrections must be applied (<a href="https://doi.org/10.1063/1.5090222">D4</a> is yet to be implemented in mainstream DFT solvers). Since hybrid functionals are impractical for molecular crystals, PBE-D3 is the optimal trade-off between accuracy and scalability (<a href="https://doi.org/10.1021/acs.jctc.3c00861">BMCOS1 benchmark</a>).</p>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>What basis set to use</title>
+</head>
+<body>
+<h1>What basis set to use</h1>
+
+<p><mark>[AZ.08.03.2025]</mark><br>
+6-31G* (p2p) is the minimal reasonable basis for conjugated molecules. Accurate energies can be obtained with Def2-TZVP (a3p) but at the expense of doubling the basis set size (<a href="https://doi.org/10.1021/acs.jpclett.9b01200">stilbene</a>, <a href="https://doi.org/10.1021/acs.jpcc.7b11271">P3HT</a>). As a trade-off, 6-311G*+ (p3pa) basis can be used as the smallest reasonable expansion of 6-31G*. Starting from potassium, 6-31G* becomes unreliable so that a composite basis should be used: 6-31G* for "organic atoms" and Def2-TZVP for transition metals and heavier elements (<a href="https://doi.org/10.1039/D2SC03127B">Ni-BTA</a>). For plane waves with <a href="https://www.vasp.at/wiki/index.php/Choosing_pseudopotentials">PAW pseudopotentials in VASP</a> the minimal cutoff is about 400 eV [<a href="https://www.vasp.at/wiki/index.php/Choosing_pseudopotentials">VASP</a>]. However, the unit cell optimization in VASP requires much larger cutoffs of up to 900 eV (<a href="https://doi.org/10.1021/acs.jctc.3c00861">BMCOS1 benchmark</a>).</p>
+
+</body>
+</html>
