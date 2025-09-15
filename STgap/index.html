@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>How to accurately calculate singlet-triplet gap</title>
+</head>
+<body>
+<h1>How to accurately calculate singlet-triplet gap</h1>
+
+<p><mark>[AZ.15.09.2025]</mark><br>
+Calculation of the singlet–triplet gap (ST gap) for excited states in organic semiconductors presents several challenges. 1) In applications such as solar cells and thermally activated delayed fluorescence, the energy difference between excited states often needs to be evaluated with kT-level accuracy. 2) Such small energy differences are highly sensitive to both dynamic and static fluctuations. 3) Comparisons frequently involve excited states of different character, such as charge-transfer (CT) states versus local excitons (LE). 4) In materials science applications, the excited system typically resides in a complex polarizable environment. Under these conditions, time-dependent density functional theory (TDDFT) is generally unreliable, and the most accurate scalable methods are based on the ΔSCF approach [<a href="https://doi.org/10.1021/acs.jpclett.4c03192">Kunze25</a>]. It is important to use spin-unrestricted orbitals in the SCF procedure [<a href="https://doi.org/10.1021/acs.jctc.4c01600">Valverde25</a>]. Two technical challenges commonly arise in practical implementations: preventing the convergence of higher excited states to lower ones and preserving pure spin character in the singlet wavefunction which is inherently multideterminantal. Mainstream quantum chemistry packages, such as Gaussian 16, often lack robust tools to address these issues, necessitating ad hoc solutions. For estimating the ST gap between excited states of the same nature, CIS-DFT (=TDA-DFT) offers a more balanced description of singlets and triplets than TDDFT, which tends to overestimate the ST gap [<a href="https://doi.org/10.1021/acs.jctc.2c00160">Liang22</a>]. However, when comparing singlets of the same nature, TDDFT remains more accurate. To estimate the energy difference between triplet states of different character (CT vs LE), particularly in a polarizable environment, the ΔSCF method is preferred. In such cases, a carefully chosen initial guess for the wavefunction can help prevent collapse to the lowest triplet state.</p>
+</body>
+</html>
